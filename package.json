@@ -1,6 +1,6 @@
 {
   "name": "coldbox-elixir-vue-2",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "'ColdBox Elixir Vue 2.0 Integration'",
   "main": "index.js",
   "repository": {
