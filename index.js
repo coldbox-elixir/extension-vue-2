@@ -9,33 +9,32 @@ Elixir.ready( function() {
             },
             extensions: [ ".js", ".vue" ]
         },
-        // use buble loader since it is the default in Elixir
-        vue: {
-            loaders: {
-                js: "buble-loader"
-            }
-        },
         module: {
-            loaders: [
+            rules: [
                 {
                     test: /\.vue$/,
-                    loader: "vue-loader"
+                    use: [ { loader: "vue-loader" } ],
+                    exclude: [ /node_modules/ ]
                 },
                 {
                     test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                    loader: "file-loader",
-                    query: {
-                        limit: 10000,
-                        name: "../img/[name].[hash:7].[ext]"
-                    }
+                    use: [ {
+                        loader: "file-loader",
+                        options: {
+                            limit: 10000,
+                            name: "../img/[name].[hash:7].[ext]"
+                        }
+                    } ]
                 },
                 {
                     test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                    loader: "url-loader",
-                    query: {
-                        limit: 10000,
-                        name: "../fonts/[name].[hash:7].[ext]"
-                    }
+                    use: [ {
+                        loader: "url-loader",
+                        options: {
+                            limit: 10000,
+                            name: "../fonts/[name].[hash:7].[ext]"
+                        }
+                    } ]
                 }
             ]
         }
