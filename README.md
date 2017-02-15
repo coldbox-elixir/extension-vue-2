@@ -2,7 +2,7 @@
 
 > ColdBox Elixir 6 support for Vue 2.0
 
-This package provides Webpack support for compiling Vue 2.0 `.vue` files in your ColdBox Elixir 2 projects. Please note that, if using ColdBox Elixir 1, you don't want this package.
+This package provides Webpack support for compiling Vue 2.0 `.vue` files in your ColdBox Elixir 2 projects. Please note that, if using ColdBox Elixir 1, you don't want this package.  [You actually want this one.](https://github.com/coldbox-elixir/extension-vue)
 
 Usage is identical to [coldbox-elixir-vue](https://github.com/coldbox-elixir/extension-vue):
 
